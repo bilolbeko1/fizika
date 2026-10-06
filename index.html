@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SCIENCE LAB — Virtual Ilmiy Laboratoriya
+        Bilolbek Yusufboyev
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <div class="logo">
+        <div class="atom">⚛</div>
+        <div>
+            <h1>SCIENCE <span>LAB</span></h1>
+            <small>O‘qibgina qolma — tajriba qil!</small>
+        </div>
+    </div>
+
+    <nav>
+        <button class="nav-btn active" data-page="home">🏠 Bosh sahifa</button>
+        <button class="nav-btn" data-page="ohm">⚡ Fizika laboratoriyasi</button>
+        <button class="nav-btn" data-page="motion">🚗 Harakat</button>
+        <button class="nav-btn" data-page="gravity">🪂 Erkin tushish</button>
+        <button class="nav-btn" data-page="projectile">🎯 Otish</button>
+        <button class="nav-btn" data-page="force">⚖️ Kuch va massa</button>
+        <button class="nav-btn" data-page="lens">🔭 Linza</button>
+        <button class="nav-btn" data-page="waves">🌊 To‘lqinlar</button>
+        <button class="nav-btn" data-page="heat">🔥 Issiqlik</button>
+        <button class="nav-btn" data-page="magnet">🧲 Magnit maydon</button>
+    </nav>
+
+    <div class="sidebar-bottom">
+        🚀 <b>Katta orzular</b><br>
+        <span>ilm bilan boshlanadi!
+            Yusufboyev Bilolbek
+        </span>
+    </div>
+
+</aside>
+
+
+<!-- MAIN -->
+<main class="main">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="mobile-logo">
+            ⚛ SCIENCE <span>LAB</span>
+        </div>
+
+        <div class="menu">
+            <a class="active">⌂ Bosh sahifa</a>
+            <a>⚗ Laboratoriyalar</a>
+            <a>📖 Kutubxona</a>
+            <a>▣ Testlar</a>
+            <a>👤 Profil</a>
+        </div>
+
+        <div class="header-icons">
+            🌙
+            <button id="searchBtn">⌕</button>
+        </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+    <section class="content">
+
+
+        <!-- HOME -->
+        <div id="home" class="page active-page">
+
+            <section class="hero">
+
+                <div class="hero-text">
+
+                    <div class="small-title">VIRTUAL ILMIY LABORATORIYA</div>
+
+                    <h2>
+                        SCIENCE <span>LAB</span>
+                    </h2>
+
+                    <h3>Virtual ilmiy laboratoriya</h3>
+
+                    <p>
+                        Bu saytda siz nafaqat o‘qiysiz, balki amalda tajriba
+                        qilib, hisoblab, o‘rganasiz. Ilm-fanni qiziqarli va
+                        interaktiv tarzda kashf eting!
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button class="primary-btn" onclick="openLab('ohm')">
+                            ▶ Boshlash
+                        </button>
+
+                        <button class="secondary-btn" onclick="showInfo()">
+                            Qanday ishlaydi?
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="hero-art">
+                    <div class="planet">🌍</div>
+                    <div class="atom-big">⚛</div>
+                    <div class="flask">⚗</div>
+                    <div class="microscope">🔬</div>
+                </div>
+
+            </section>
+
+
+            <!-- CARDS -->
+
+            <div class="section-title">
+                <h2>Laboratoriyalar</h2>
+                <span>9 ta interaktiv tajriba</span>
+            </div>
+
+            <div class="lab-grid">
+
+                <div class="lab-card" onclick="openLab('ohm')">
+                    <div class="card-icon">⚡</div>
+                    <h3>Ohm qonuni</h3>
+                    <p>U = I × R formulasi orqali kuchlanish, tok va qarshilikni o‘rganing.</p>
+                    <button>→</button>
+                </div>
+
+                <div class="lab-card" onclick="openLab('motion')">
+                    <div class="card-icon">🚗</div>
+                    <h3>Tezlik / Masofa / Vaqt</h3>
+                    <p>Harakatning asosiy parametrlarini hisoblang.</p>
+                    <button>→</button>
+                </div>
+
+                <div class="lab-card" onclick="openLab('gravity')">
+                    <div class="card-icon">🪂</div>
+                    <h3>Erkin tushish</h3>
+                    <p>Jismning balandlikdan tushishini tajriba qiling.</p>
+                    <button>→</button>
+                </div>
+
+                <div class="lab-card" onclick="openLab('projectile')">
+                    <div class="card-icon">🎯</div>
+                    <h3>Otish trayektoriyasi</h3>
+                    <p>Burchak va tezlik yordamida parabolik harakatni ko‘ring.</p>
+                    <button>→</button>
+                </div>
+
+                <div class="lab-card" onclick="openLab('force')">
+                    <div class="card-icon">⚖️</div>
+                    <h3>Kuch va massa</h3>
+                    <p>F = m × a formulasi bilan kuchni hisoblang.</p>
+                    <button>→</button>
+                </div>
+
+                <div class="lab-card" onclick="openLab('lens')">
+                    <div class="card-icon">🔭</div>
+                    <h3>Linza va fokus</h3>
+                    <p>Linza fokus masofasi va tasvir hosil bo‘lishini o‘rganing.</p>
+                    <button>→</button>
+                </div>
+
+                <div class="lab-card" onclick="openLab('waves')">
+                    <div class="card-icon">🌊</div>
+                    <h3>To‘lqinlar</h3>
+                    <p>Chastota, tezlik va to‘lqin uzunligini kuzating.</p>
+                    <button>→</button>
+                </div>
+
+                <div class="lab-card" onclick="openLab('heat')">
+                    <div class="card-icon">🔥</div>
+                    <h3>Issiqlik</h3>
+                    <p>Issiqlik miqdorini hisoblash va temperaturani o‘rganish.</p>
+                    <button>→</button>
+                </div>
+
+                <div class="lab-card" onclick="openLab('magnet')">
+                    <div class="card-icon">🧲</div>
+                    <h3>Magnit maydon</h3>
+                    <p>Magnit kuch chiziqlarini interaktiv kuzating.</p>
+                    <button>→</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LAB PAGES -->
+
+        <div id="ohm" class="page">
+            <div class="lab-header">
+                <span>⚡</span>
+                <div>
+                    <h1>Ohm qonuni</h1>
+                    <p>U = I × R</p>
+                </div>
+            </div>
+
+            <div class="experiment">
+
+                <div class="controls">
+
+                    <label>Kuchlanish U (V)</label>
+                    <input id="voltage" type="range" min="1" max="50" value="12">
+                    <b id="voltageValue">12 V</b>
+
+                    <label>Qarshilik R (Ω)</label>
+                    <input id="resistance" type="range" min="1" max="20" value="4">
+                    <b id="resistanceValue">4 Ω</b>
+
+                    <button class="primary-btn" onclick="calculateOhm()">
+                        Hisoblash
+                    </button>
+
+                </div>
+
+                <div class="result-box">
+
+                    <h3>Natija</h3>
+
+                    <div class="result-number">
+                        <span id="currentResult">3.00</span> A
+                    </div>
+
+                    <p>Tok kuchi</p>
+
+                    <hr>
+
+                    <div>
+                        Quvvat:
+                        <b id="powerResult">36.00 W</b>
+                    </div>
+
+                    <div class="formula">
+                        I = U / R
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- MOTION -->
+        <div id="motion" class="page">
+            <div class="lab-header">
+                <span>🚗</span>
+                <div>
+                    <h1>Tezlik / Masofa / Vaqt</h1>
+                    <p>v = s / t</p>
+                </div>
+            </div>
+
+            <div class="calculator">
+
+                <label>Masofa (km)</label>
+                <input id="distance" type="number" value="120">
+
+                <label>Vaqt (soat)</label>
+                <input id="time" type="number" value="2">
+
+                <button class="primary-btn" onclick="calculateMotion()">
+                    Hisoblash
+                </button>
+
+                <div class="big-result">
+                    Tezlik: <b id="speedResult">60</b> km/soat
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- GRAVITY -->
+        <div id="gravity" class="page">
+            <div class="lab-header">
+                <span>🪂</span>
+                <div>
+                    <h1>Erkin tushish</h1>
+                    <p>h = ½gt²</p>
+                </div>
+            </div>
+
+            <div class="calculator">
+
+                <label>Balandlik (m)</label>
+                <input id="height" type="number" value="20">
+
+                <button class="primary-btn" onclick="calculateGravity()">
+                    Tajribani boshlash
+                </button>
+
+                <div class="big-result">
+                    Tushish vaqti:
+                    <b id="fallTime">2.02</b> s
+                </div>
+
+                <div class="simulation">
+                    <div id="fallBall">●</div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- PROJECTILE -->
+        <div id="projectile" class="page">
+            <div class="lab-header">
+                <span>🎯</span>
+                <div>
+                    <h1>Otish trayektoriyasi</h1>
+                    <p>Parabolik harakat</p>
+                </div>
+            </div>
+
+            <div class="calculator">
+
+                <label>Boshlang‘ich tezlik (m/s)</label>
+                <input id="projectileSpeed" type="number" value="20">
+
+                <label>Burchak (°)</label>
+                <input id="projectileAngle" type="number" value="45">
+
+                <button class="primary-btn" onclick="calculateProjectile()">
+                    Traektoriyani chizish
+                </button>
+
+                <div class="big-result">
+                    Maksimal balandlik:
+                    <b id="maxHeight">10.19</b> m
+                    <br>
+                    Masofa:
+                    <b id="range">40.82</b> m
+                </div>
+
+                <canvas id="projectileCanvas"></canvas>
+
+            </div>
+        </div>
+
+
+        <!-- FORCE -->
+        <div id="force" class="page">
+            <div class="lab-header">
+                <span>⚖️</span>
+                <div>
+                    <h1>Kuch va massa</h1>
+                    <p>F = m × a</p>
+                </div>
+            </div>
+
+            <div class="calculator">
+
+                <label>Massa (kg)</label>
+                <input id="mass" type="number" value="10">
+
+                <label>Tezlanish (m/s²)</label>
+                <input id="acceleration" type="number" value="5">
+
+                <button class="primary-btn" onclick="calculateForce()">
+                    Hisoblash
+                </button>
+
+                <div class="big-result">
+                    Kuch:
+                    <b id="forceResult">50</b> N
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- LENS -->
+        <div id="lens" class="page">
+            <div class="lab-header">
+                <span>🔭</span>
+                <div>
+                    <h1>Linza va fokus</h1>
+                    <p>1/f = 1/do + 1/di</p>
+                </div>
+            </div>
+
+            <div class="calculator">
+
+                <label>Fokus masofasi f (cm)</label>
+                <input id="focal" type="number" value="10">
+
+                <label>Predmet masofasi do (cm)</label>
+                <input id="objectDistance" type="number" value="20">
+
+                <button class="primary-btn" onclick="calculateLens()">
+                    Hisoblash
+                </button>
+
+                <div class="big-result">
+                    Tasvir masofasi:
+                    <b id="imageDistance">20</b> cm
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- WAVES -->
+        <div id="waves" class="page">
+            <div class="lab-header">
+                <span>🌊</span>
+                <div>
+                    <h1>To‘lqinlar</h1>
+                    <p>v = f × λ</p>
+                </div>
+            </div>
+
+            <div class="calculator">
+
+                <label>Chastota (Hz)</label>
+                <input id="frequency" type="number" value="5">
+
+                <label>To‘lqin uzunligi (m)</label>
+                <input id="wavelength" type="number" value="2">
+
+                <button class="primary-btn" onclick="calculateWave()">
+                    Hisoblash
+                </button>
+
+                <div class="big-result">
+                    To‘lqin tezligi:
+                    <b id="waveSpeed">10</b> m/s
+                </div>
+
+                <canvas id="waveCanvas"></canvas>
+
+            </div>
+        </div>
+
+
+        <!-- HEAT -->
+        <div id="heat" class="page">
+            <div class="lab-header">
+                <span>🔥</span>
+                <div>
+                    <h1>Issiqlik</h1>
+                    <p>Q = m × c × ΔT</p>
+                </div>
+            </div>
+
+            <div class="calculator">
+
+                <label>Massa (kg)</label>
+                <input id="heatMass" type="number" value="2">
+
+                <label>Issiqlik sig‘imi c (J/kg°C)</label>
+                <input id="heatCapacity" type="number" value="4200">
+
+                <label>Temperatura o‘zgarishi (°C)</label>
+                <input id="temperature" type="number" value="10">
+
+                <button class="primary-btn" onclick="calculateHeat()">
+                    Hisoblash
+                </button>
+
+                <div class="big-result">
+                    Issiqlik:
+                    <b id="heatResult">84000</b> J
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- MAGNET -->
+        <div id="magnet" class="page">
+            <div class="lab-header">
+                <span>🧲</span>
+                <div>
+                    <h1>Magnit maydon</h1>
+                    <p>Magnit kuch chiziqlari</p>
+                </div>
+            </div>
+
+            <div class="magnet-area">
+
+                <div class="magnet-shape">
+                    <div class="north">N</div>
+                    <div class="south">S</div>
+                </div>
+
+                <div class="field-line line1"></div>
+                <div class="field-line line2"></div>
+                <div class="field-line line3"></div>
+                <div class="field-line line4"></div>
+                <div class="field-line line5"></div>
+
+            </div>
+
+            <button class="primary-btn" onclick="animateMagnet()">
+                ⚡ Maydonni faollashtirish
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
